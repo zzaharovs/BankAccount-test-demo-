@@ -1,14 +1,13 @@
+package ru.netology.bank.accounts;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import ru.netology.bank.accounts.Account;
-import ru.netology.bank.accounts.CheckingAccount;
-
 
 public class CheckingAccountTest {
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPay_NegativeNumber() {
         // given:
         final int amount = -100;
@@ -29,7 +28,7 @@ public class CheckingAccountTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPay_NegativeBalanceAfterPay () {
 
 
@@ -50,7 +49,7 @@ public class CheckingAccountTest {
     }
 
 
-    @org.junit.jupiter.params.ParameterizedTest
+    @ParameterizedTest
     @ValueSource(ints = {100, 2000, 500000})
     public void testAddMoneyCreditingMoneyInBalance(int amount) {
 

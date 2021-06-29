@@ -1,8 +1,8 @@
+package ru.netology.bank.accounts;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import ru.netology.bank.accounts.Account;
-import ru.netology.bank.accounts.CreditAccount;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.is;
 public class CreditAccountHamcrestTest {
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPay_NegativeNumber() {
         // given:
         final int amount = -100;
@@ -26,7 +26,7 @@ public class CreditAccountHamcrestTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPayDebitingMoney() {
 
         //given
@@ -44,7 +44,7 @@ public class CreditAccountHamcrestTest {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testAddMoneyIfBalanceIsZero() {
 
         //given
@@ -83,7 +83,7 @@ public class CreditAccountHamcrestTest {
     }
 
 
-    @org.junit.jupiter.api.Test
+    @Test
     public void testTransferToCreditAccount() {
 
         //given
@@ -104,5 +104,3 @@ public class CreditAccountHamcrestTest {
 
     }
 }
-
-
