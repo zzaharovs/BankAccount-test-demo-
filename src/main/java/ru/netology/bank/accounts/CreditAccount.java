@@ -31,16 +31,14 @@ public class CreditAccount extends Account {
         //Делаем запись об отправке перевода, проводим транзакцию и записываем ее результат в переменную
         System.out.printf("Перевод со счета %s на счет %s отправлен. Сумма перевода составила %d \n",
                 this, account, amount);
-        boolean transactionSuccess = account.addMoney(amount);
         //Проверяем успешно ли прошла транзакция. Если нет - деньги со счета не списываем
-        if (transactionSuccess == false) {
+        if (!account.addMoney(amount)) {
             System.out.printf("Перевод на сумму %d возвращен на счет %s \n", amount, this);
             return false;
         }
         ;
         //списываем деньги со счета
         this.balance -= amount;
-        // account.addMoney(amount);
         return true;
 
 
