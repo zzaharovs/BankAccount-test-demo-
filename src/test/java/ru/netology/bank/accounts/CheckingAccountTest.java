@@ -3,6 +3,8 @@ package ru.netology.bank.accounts;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import ru.netology.bank.accounts.Account;
+import ru.netology.bank.accounts.CheckingAccount;
 
 public class CheckingAccountTest {
 
